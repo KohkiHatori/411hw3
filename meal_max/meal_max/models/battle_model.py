@@ -19,6 +19,9 @@ class BattleModel:
         """
         Initiates a battle between the first two meals in self.combatants and returns the name of the winner.
 
+        Returns:
+            str: The name of the winning meal.
+
         Raises:
             ValueError: If there are not enough combatants to start a battle or if the meal does not exist or is marked as deleted.
             sqlite3.Error: If there is a database error.
@@ -85,6 +88,10 @@ class BattleModel:
     def get_battle_score(self, combatant: Meal) -> float:
         """
         Calculates and returns the score for a given meal combatant.
+
+        Returns:
+            float: The calculated battle score for the meal combatant.
+
         Args:
             combatant (Meal): The meal to calculate the battle score for.
         """
@@ -104,7 +111,8 @@ class BattleModel:
 
     def get_combatants(self) -> List[Meal]:
         """
-        Returns a list of all combatants(meals) in the list of combatannts, self.combatants.
+        Returns:
+            list: a list of all combatants(meals) in the list of combatannts, self.combatants.
         """
         logger.info("Retrieving current list of combatants.")
         return self.combatants
