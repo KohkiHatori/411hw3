@@ -13,4 +13,4 @@ RUN pip install --no-cache-dir pytest==8.2.2 pytest-mock==3.14.0
 RUN pip install --no-cache-dir -r requirements.lock
 
 # Run app.py when the container launches
-CMD ["python", "-m", "pytest", "."]
+CMD ["python3", "-m", "pytest", "."]
